@@ -60,7 +60,6 @@ function updateTrailStats() {
 }
 
 //The sendNewStat function is used to asyncronously post to the trailStatsNow
-//object located in the trailController.
 function sendNewStat(trailStat, trailStatValue) {
   fetch('/trail/updateTrailStats/' + trailStat + '/' + trailStatValue),
   {method: 'POST'}).then((res) => {
@@ -73,27 +72,6 @@ function sendNewStat(trailStat, trailStatValue) {
   });
 }
 
-function gameScreen(screenNumber)   {
-    //Make async call to server to get requested gameScreen html
-    var gameContainer = document.getElementById("gameContainer");
-
-    fetch('/game/getNewGameScreen/' + screenNumber).then(function(response) {
-      if (response.status !== 200) {
-        console.log('Problem with ajax call!' + response.status + " msg: "  +
-        response.value);
-          return;
-        }
-        currentScreen = screenNumber;
-        response.text().then(function(data) {
-        gameContainer.innerHTML = data;
-        if(currentScreen == 4) {
-          showSettings();
-        }
-      })
-  });
-}
-gameScreen(0);
-
 //Passes playerProfession value to the backend
 function saveProfession(profession) {
       fetch('/game/saveProfession/' + profession).then(function(response) {
@@ -105,6 +83,7 @@ function saveProfession(profession) {
           response.text()
       });
     };
+	
 //Passes playerMoney value to the backend
 function saveMoney(playerMoney) {
       fetch('/game/saveMoney/' + playerMoney).then(function(response) {
@@ -140,18 +119,3 @@ function saveStartMonth(startMonth) {
           response.text()
       });
     };
-
-//Fetches json values from gameSettings array
-function showSettings() {
-  fetch('/game/getSettings').then(function(response) {
-    if (response.status !== 200) {
-        console.log('Problem with ajax call! ' + response.status + "msg: " + response.value);
-        return;
-    }
-    response.json().then(function(data) {
-      console.log(data);
-      displaySettings(data);
-      return data;
-    });
-  });
-}

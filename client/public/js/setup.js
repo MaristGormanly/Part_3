@@ -21,3 +21,38 @@ document.getElementById("blinkText").onclick = function() {
     window.location.href = "/mainmenu";
 }
 
+function gameScreen(screenNumber)   {
+    
+    var gameContainer = document.getElementById("gameContainer");
+
+    fetch('/game/getNewGameScreen/' + screenNumber).then(function(response) {
+      if (response.status !== 200) {
+        console.log('Problem with ajax call!' + response.status + " msg: "  +
+        response.value);
+          return;
+        }
+        currentScreen = screenNumber;
+        response.text().then(function(data) {
+        gameContainer.innerHTML = data;
+        if(currentScreen == 4) {
+          showSettings();
+        }
+      })
+  });
+}
+gameScreen(0);
+
+//Fetches json values from gameSettings array
+function showSettings() {
+  fetch('/game/getSettings').then(function(response) {
+    if (response.status !== 200) {
+        console.log('Problem with ajax call! ' + response.status + "msg: " + response.value);
+        return;
+    }
+    response.json().then(function(data) {
+      console.log(data);
+      displaySettings(data);
+      return data;
+    });
+  });
+}
