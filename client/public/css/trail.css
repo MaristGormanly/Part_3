@@ -1,0 +1,20 @@
+#statsTrail{
+    font-size: 25pt;
+}
+
+.test {
+  background: url(/images/image3.png) repeat;
+  position: center;
+  z-index: 100;
+  width: 300px;
+}
+
+.test img {
+  width: 15%;
+  display: block;
+  position: absolute;
+  z-index: 500;
+  margin-top: 23%;
+  margin-left: 19.5%;
+  margin-left: center;
+}

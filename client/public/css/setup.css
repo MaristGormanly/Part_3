@@ -1,0 +1,40 @@
+.c{
+	font-size: 50px;
+}
+
+.a{
+	font-size: 50px;
+}
+
+#body{
+	font-size: 50pt;
+}
+
+#background{
+	font-size: 50px;
+}
+
+#choiceText{
+    font-size: 32px;
+    margin-top: 60px;
+}
+
+#menuOptions{
+    cursor: pointer;
+}
+
+#monthOptions{
+    cursor: pointer;
+}
+
+#submitBttn{
+    cursor: pointer;
+}
+
+#choice{
+    font-size: 25px;
+}
+
+#leaderLabel{
+    font-size: 30px;
+}

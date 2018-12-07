@@ -1,0 +1,90 @@
+.boxback{
+	background-color: black;
+	background-position: center;
+    height: 950px;
+	width: 1565px;
+	display: block;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 100px;
+}
+
+.boxBack{
+    background-image: url(/images/image5.png);
+	background-repeat: no-repeat;
+    height: 720px;
+	width: 1200px;
+	display: block;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 100px;
+	
+}
+
+#continueClick{
+    font-family: serif;
+}
+
+#introText{
+    padding-top: 225px;
+    padding-left: 200px;
+    padding-right: 550px;
+    text-align: center;
+}
+
+#spacebarText{
+    font: bold 60pt serif;
+    padding-top: 25px;
+}
+
+
+.midCol {
+    color: white;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-size: 25pt;
+    text-align: center;
+}
+
+.midTitle{
+    font-size: 70px;
+    margin-top: 70px;
+	text-align: center;
+}
+
+.menuOptions{
+    font-size: 50px;
+    margin-top: 80px;
+	text-align: center;
+}
+
+.blinkingText{
+	font-size: 50px;
+    -webkit-animation: flickerAnimation 1s infinite;
+    -moz-animation: flickerAnimation 1s infinite;
+    -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite; 
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}

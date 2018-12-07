@@ -1,0 +1,18 @@
+
+.blinkingText{
+	font-size: 50px;
+}
+
+#introText{
+	font: bold 60pt serif;
+    padding-top: 225px;
+    padding-left: 200px;
+    padding-right: 550px;
+    text-align: center;
+}
+
+#spacebarText{
+    font: bold 90px serif;
+    padding-top: 50px;
+	color: white;
+}
